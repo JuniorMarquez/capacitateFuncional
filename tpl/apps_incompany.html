@@ -1,0 +1,63 @@
+
+<link href="../css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/animate.css" rel="stylesheet" type="text/css">
+<link href="../css2/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="../css2/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="../css2/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="../css2/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="../css2/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="../css2/responsive.css" rel="stylesheet" type="text/css">
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = true;
+  ">
+  <!-- main -->
+<div ng-controller="IncompanyCtrl">
+    <section id="gallery"  >
+     <div class="container pt-50 pb-30">
+        <div class="section-content">
+      
+        <div class="row">
+            <div class="row">
+                  <div class="btn-group" ng-show="item.editing">
+                    <label ng-change='selectorM(item)'  class="btn btn-default" ng-model="item.selector" btn-radio="'area'">Area de Conocimiento</label>
+                    <label ng-change='selectorM(item)' class="btn btn-default" ng-model="item.selector" btn-radio="'obligacion'">Obligación LAboral</label>
+                  </div>
+            </div>
+            <!-- <div class="col-md-12" ng-if="{{item.selector=='area'}}"> -->
+             <div class="col-md-12" ng-if="{{item.selector=='area'}}">
+              <div id="grid" class="gallery-isotope grid-4 gutter clearfix">
+                 <div class="gallery-item wheel" ng-repeat="area in vectorAreas" >
+                  <div class="work-gallery panel panel-default2">
+                  <a ui-sref="app.gridCursos" ng-click="irAGrid(area)">
+                    <div class="gallery-thumb">
+                      <img class="img-fullwidth" alt="" src="{{area.img}}">
+                      <div class="gallery-overlay"></div>                  
+                      <div class="gallery-contect">
+                        <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                        <h3 class="title  text-white  m-0">{{area.nombre}}</h3>
+                        </ul>
+                      </div> 
+                    </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+</div>
+
+  </div>     
+</div>

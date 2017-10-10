@@ -1,0 +1,49 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = true;
+  ">
+  <div class="col" ng-controller="publicacionesCtrl">
+<div class="bg-light lter b-b wrapper-md">
+<br/>
+  <h1 class="m-n font-thin h3 text-center">Publicaciones</h1>
+  <br/>
+</div>
+
+<div class="wrapper-md" style="width: 80%;margin: 0 auto;">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="blog-post" ng-repeat="publicacion in vectorPublicaciones">                   
+        <div class="panel">
+          <div>
+            <img src="img/c0.jpg" class="img-full">
+          </div>
+          <div class="wrapper">
+            <h2 class="m-t-none">{{publicacion.titulo}}</h2>
+            <div>
+              <p>
+               <ul>
+              <li  ng-repeat="item in publicacion.itemsContenido">
+                {{item.contenido}}
+              </li>
+            </ul>
+              <br><br>
+           </p>
+            </div>
+            <div class="line line-lg b-b b-light"></div>
+            <div class="text-muted">
+              <i class="fa fa-user text-muted"></i> Autor: <a href class="m-r-sm">Admin</a>
+              <i class="fa fa-clock-o text-muted"></i> Feb 20, 2013
+              <!-- <a href class="m-l-sm"><i class="fa fa-comment-o text-muted"></i> 2 comments</a> -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+</div>
+        
+  </div>
+     
+</div>

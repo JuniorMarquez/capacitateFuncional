@@ -1,0 +1,81 @@
+
+<link href="../css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/animate.css" rel="stylesheet" type="text/css">
+<link href="../css2/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="../css2/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="../css2/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="../css2/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="../css2/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="../css2/responsive.css" rel="stylesheet" type="text/css">
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = true;
+  ">
+  <!-- main -->
+<div ng-controller="gridCapacitacionesCtrl">
+<div>
+        <br/>
+        <ul class="breadcrumb bg-white b-a">
+          <li><a ui-sref="app.incompany"><i class="fa fa-home"></i> Capacitaciones</a></li>
+          <!-- <li><a href>{{selector}}</a></li> -->
+          <li class="active">{{seleccionado}}</li>
+        </ul>
+      </div>
+    <section id="gallery"  >
+     <div class="container pt-50 pb-30">
+        <div class="section-content">
+      
+        <div class="row">
+          <div class="col-md-12">
+         
+          <!--   <h2 class="bold text-center">Selector:</h2> <h3 class=" text-center">{{selector}}</h3><p/>
+              <h2 class="bold text-center">Seleccionado:</h2> <h3 class=" text-center">{{seleccionado}}</h3> -->
+            <!-- Portfolio Gallery Grid -->
+            <div id="grid" class="gallery-isotope grid-4 gutter clearfix" ui-refresh="capacitacionesFiltradas">
+     
+               <div class="gallery-item wheel" ng-repeat="capacitacion in capacitacionesFiltradas" >
+                <!-- <div class="gallery-item wheel" ng-repeat="curso in vectorCursos1" style="display: inline-block;" ui-refresh="vectorCursos1"> -->
+                <div class="work-gallery">
+                <a ui-sref="app.detalleCurso" ng-click="openCurso(capacitacion)">
+                  <div class="gallery-thumb">
+                    <img class="img-fullwidth" alt="" src="{{capacitacion.img}}">
+                    <div class="gallery-overlay"></div>                  
+                    <div class="gallery-contect">
+                      <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                      <!-- <h3 class="title  text-white  m-0">{{capacitacion.nombre}}</h3> -->
+                        <li><i class="fa fa-link fa-3x text-white"></i></li>
+                   
+                      </ul>
+                    </div> 
+                  </div>
+                  </a>
+                  <div class="gallery-bottom-part text-center">
+                    
+                    <h4 class="sub-title m-0 text-white" >{{capacitacion.titulo}}</h4>
+                    <!-- <h5 class="title  text-white  m-0">{{capacitacion.nombre}}</h5> -->
+                  
+                  </div>
+                </div>
+              </div>
+              
+
+
+            </div>
+            <!-- End Portfolio Gallery Grid -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+</div>
+
+  </div>     
+</div>

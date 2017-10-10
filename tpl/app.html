@@ -1,0 +1,197 @@
+<link href="/css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/css2/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="/css2/animate.css" rel="stylesheet" type="text/css">
+<link href="/css2/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="/css2/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="/css2/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="/css2/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="/css2/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="/css2/responsive.css" rel="stylesheet" type="text/css">
+<link  href="js2/revolution-slider/css/settings.css" rel="stylesheet" type="text/css"/>
+<link  href="js2/revolution-slider/css/layers.css" rel="stylesheet" type="text/css"/>
+<link  href="js2/revolution-slider/css/navigation.css" rel="stylesheet" type="text/css"/>
+
+<!-- CSS | Theme Color -->
+<link href="css2/colors/theme-skin-color-set-1.css" rel="stylesheet" type="text/css">
+
+<!-- external javascripts -->
+<script src="js2/jquery-2.2.4.min.js"></script>
+<script src="js2/jquery-ui.min.js"></script>
+<script src="js2/bootstrap.min.js"></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="js2/jquery-plugin-collection.js"></script>
+
+<!-- Revolution Slider 5.x SCRIPTS -->
+<script src="js2/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script src="js2/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+  <!-- navbar -->
+ <link href="../css2/style-main.css" rel="stylesheet" type="text/css">
+
+  <div data-ng-include=" 'tpl/blocks/header.html' " class="app-header navbar" style="height:100px;">
+  </div>
+  <!-- / navbar -->
+
+  <!-- menu -->
+  <div data-ng-include=" 'tpl/blocks/aside.html' " class="app-aside hidden-xs {{app.settings.asideColor}}" style="box-shadow:7px 7px 7px rgba(0, 0, 0, 0.22);">
+  </div>
+  <!-- / menu -->
+
+  <!-- content -->
+  <div class="app-content" >
+
+    <div ui-butterbar></div>
+    <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside" ></a>
+    <div class="app-content-body fade-in-up" ui-view>
+      
+
+    </div>
+  </div>
+  <!-- /content -->
+
+  <!-- aside right -->
+ 
+  <!-- / aside right -->
+
+  <!-- footer -->
+
+  <div id="pie"class="wrapper b-t bg-light2" style="display:in-block;" ng-controller="FlotChartDemoCtrl">
+    <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+  <!-- <div id="pie"class="wrapper b-t bg-light2" ng-hide="$state.includes('app.page.profile')" style="display:in-block;"> -->
+   <footer id="" class="footer bg-black-222" data-bg-img="images/footer-bg.png">
+    <div class="container pt-70 " >
+      <div class="row">
+       
+        <!-- <div class="col-sm-6 col-md-3">
+          <div class="widget ">
+            <h3 class="widget-title line-bottom text-white">lo más reciente...</h3>
+            <div class="latest-posts">
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="images/services/bg-3.jpg"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">Congreso nacional de de tributos y aduana</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">Capacitación </a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">otra noticia</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">otra noticia</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div> -->
+         <div class="col-sm-6 col-md-3">
+          <div class=" dark">
+            <img class="mt-10 mb-15" alt="" src="images/logo-wide-white.png">
+         
+          </div>
+          <div class="text-white">Deseas formar parte de nuestro equipo de facilitadores?
+          <br/><p></p>
+<button class="btn btn-primary2 btn-xl text-hite font-bold pull-right hvr-pulse-grow" ng-click="openPostulacion()" style="box-shadow:7px 7px 7px rgba(0, 0, 0, 0.22);">Postulate!</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5">
+        <form>
+          <div class="panel panel-default" style="box-shadow:11px 31px 16px rgba(0, 0, 0, 0.39);">
+            <div class="panel-heading">Recibe noticias en el área de tu interés</div>
+              <div class="panel-body">
+                <div class="m-b">
+          
+                  <div class="m-l-xxl">
+                    <div class="pos-rlt wrapper b b-light r r-2x">
+                      <span class="arrow left pull-up"></span>
+                      <p class="m-b-none">
+                         <input type="text" class="form-control" placeholder="Tu Nombre" ng-model="item.nombre">
+                         <p/>
+                          <input type="email" class="form-control" placeholder="Tu Email" ng-model="item.email">
+                           <p/>
+                           <input type="text" class="form-control" placeholder="Telef." ng-model="item.telefono">
+                      </p>
+                    </div>
+               
+                  </div>
+                </div>
+              
+                  <button class="btn btn-xl btn-primary2 text-center pull-right font-bold" type="button" ng-click="suscripcionFooter(item)">SUSCRIBETE!</button>                      
+            </div>
+             
+          </div>
+          </form>
+        </div>
+
+        
+         <div class="col-sm-5 col-md-4">
+        
+           <div class="widget ">
+    
+            <ul class="list-border">
+    <li><i class="fa fa-mobile fa-3x"></i><a > +58 {{telefonoMovil}}</a></li>
+              <li> <i class="fa fa-phone fa-3x"></i><a > +58 {{telefono1}} / {{telefono2}}</a>
+              </li> 
+             
+              <li><i class="fa fa-envelope-o fa-3x"></i><a > {{emailContacto}}</a></li>
+              <li><i class="fa fa-map-marker fa-3x"></i><a class="lineheight-20"> {{direccion}}</a></li>
+              
+            </ul>
+         <ul class="styled-icons icon-dark mt-20">
+              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".1s" data-wow-offset="10"><a href="http://facebook.com/{{facebook}}" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s" data-wow-offset="10"><a href="http://twitter.com/{{twitter}}" target="_blank"><i class="fa fa-twitter fa-2x" style="color:#4099FF;"></i></a></li>
+              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s" data-wow-offset="10"><a href="http://instagram.com/{{instagram}}" target="_blank"><i class="fa fa-instagram fa-2x" style="color:#9b683f;"></i></a></li>
+              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s" data-wow-offset="10" ><a href="http://youtube.com/{{instagram}}" target="_blank"><i class="fa fa-youtube fa-2x" style="color:#c4302b;"></i></a></li>
+            </ul>
+          
+          </div>
+        </div>
+        <!-- <div class="col-sm-6 col-md-3">
+         
+        </div> -->
+      </div>
+    </div>
+    <div class="footer-bottom bg-black-333">
+      <div class="container pt-20 pb-20">
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="font-11 text-black-777 m-0">Copyright &copy;  <a hre="http://sohigh.com.ve" ><span class="color:blue;">so High!</span></a>  2017</p>
+          </div>
+          <div class="col-sm-3 text-right">
+          <span class="pull-right">...ir al Inicio <a href ui-scroll="app" class="m-l-sm text-muted"><b><i class="fa fa-long-arrow-up "></i></b></a>
+
+    </span>
+          </div>
+          <div class="col-sm-3 text-right">
+          <span class="pull-right">Administrar <a href="administracion" target="_blank"class="m-l-sm text-muted"><b><i class="fa fa-gear "></i></b></a>
+          
+    </span>
+          </div>
+        </div>
+          
+      </div>
+
+    </div>
+  </footer>
+  </div>
+  <!-- / footer -->
+
+<!--   <div data-ng-include=" 'tpl/blocks/settings2.html' " class="settings panel panel-default">
+  </div> -->

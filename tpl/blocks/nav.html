@@ -1,0 +1,139 @@
+<!-- list --> 
+
+<ul class="nav" ng-controller="FlotChartDemoCtrl"> 
+  <li class="hidden-folded  padder m-t m-b-sm text-muted text-xs">
+  </li>
+  <li ui-sref-active="active" >
+    <a ui-sref="app.dashboard-v1">
+      <span class="font-bold"  translate="aside.nav.DASHBOARD"
+      >Inicio</span>
+    </a>
+  </li>
+
+
+  <li ng-class="{active:$state.includes('app.ui')}" >
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <span class="font-bold" style="padding-left:5%;"  translate="aside.nav.MIEMBROS"
+      >Formacion y Capacitacion</span>
+    </a>
+    <ul class="nav nav-sub dk" style="padding-left:0;">
+      <li ui-sref-active="active" style="padding-left:0;" ng-click="openMantenimiento()">
+        <a ui-sref="apps.congresos" >
+          <span translate="aside.nav.components.cap.CONGRESOS">Congresos</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.cursos">
+                <b class="label pull-right font-bold text-white"><i class="glyphicon glyphicon-star"></i></b>
+      <b class="label  pull-right"></b>
+          <span translate="aside.nav.components.cap.CURSOS">Cursos</span>
+        </a>
+      </li>
+       <li ui-sref-active="active" ng-click="openMantenimiento()">
+        <a ui-sref="apps.diplomados">
+          <span translate="aside.nav.components.cap.DIPLOMADOS">Diplomados</span>
+        </a>
+      </li>
+       <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.foros">
+          <span translate="aside.nav.components.cap.FOROS">Foros</span>
+        </a>
+      </li>
+       <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.jornadas">
+          <span translate="aside.nav.components.cap.JORNADAS">Jornadas</span>
+        </a>
+      </li>  
+      <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.talleres">
+          <span translate="aside.nav.components.cap.TALLERES">Telleres</span>
+        </a>
+      </li>  
+      <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.seminarios">
+          <span translate="aside.nav.components.cap.SEMINARIOS">Seminarios</span>
+        </a>
+      </li>  
+      <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.programa">
+          <span translate="aside.nav.components.cap.PROGRAMA">Programa INCES</span>
+        </a>
+      </li>     
+    </ul>
+  </li>
+
+  <li ui-sref-active="active" >
+    <a ui-sref="app.incompany">
+      <span class="font-bold"  translate="aside.nav.ENLACES"
+      >InCompany</span>
+    </a>
+  </li>
+  <li ui-sref-active="active" >
+    <a ui-sref="app.publicaciones">
+      <span class="font-bold" translate="aside.nav.CALENDAR">Publiaciones</span>
+    </a>
+  </li>
+  <li ui-sref-active="active" >
+    <a ui-sref="app.actualidad">
+     <span class="font-bold"  translate="aside.nav.PROFESIONALES"
+      >Actualidad</span>
+    </a>
+  </li>
+ 
+  <li ng-class="{active:$state.includes('app.ui')}" >
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <span class="font-bold" style="padding-left:5%;" translate="aside.nav.SOLICITUDESa">Nosotros</span>
+    </a>
+    <ul class="nav nav-sub dk" style="padding-left:0;">
+      <li ui-sref-active="active" style="padding-left:0;">
+        <a ui-sref="app.empresa">
+          <span translate="aside.nav.components.sol.EMPRESA">Empresa</span>
+        </a>
+      </li>
+      <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.equipo">
+          <span translate="aside.nav.components.sol.EQUIPO">Equipo Directivo</span>
+        </a>
+      </li>
+       <li ui-sref-active="active" style="padding-left:0;">
+        <a ui-sref="app.facilitadores">
+          <span translate="aside.nav.components.sol.FACILITADORES">Facilitadores</span>
+        </a>
+      </li>
+       <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.alianzas">
+          <span translate="aside.nav.components.sol.ALIANZAS">Alianzas Estratégicas y Convenios</span>
+        </a>
+      </li>
+       <li ui-sref-active="active"ng-click="openMantenimiento()">
+        <a ui-sref="apps.fundacion">
+          <span translate="aside.nav.components.sol.FUNDACION">Fundación Capacítate</span>
+        </a>
+      </li>     
+    </ul>
+  </li>
+  <li ui-sref-active="active" ng-click="openMantenimiento()">
+    <a>
+      <b class="label bg-success pull-right font-bold">Nuevo</b>
+      <b class="label bg-success pull-right"></b>
+      <span class="font-bold"  translate="aside.nav.ELEARNING"
+      >E-Learning</span>
+    </a>
+  </li>
+    <li ui-sref-active="active" >
+    <a ui-sref="app.contacto">
+      <span class="font-bold"  translate="aside.nav.CONTACTO"
+      >Contacto</span>
+    </a>
+  </li>
+
+ </ul>
+

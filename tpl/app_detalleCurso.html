@@ -1,0 +1,326 @@
+
+<link href="../css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/animate.css" rel="stylesheet" type="text/css">
+<link href="../css2/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="../css2/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="../css2/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="../css2/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="../css2/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="../css2/responsive.css" rel="stylesheet" type="text/css">
+  <script type="text/ng-template" id="modalInscripcion.html">
+  <div ng-include="'tpl/modalInscripcion.html'"></div>
+</script>
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = true;
+  ">
+  <!-- main -->
+
+  <div class="col" ng-controller="detalleCursoCtrl">
+ <div class="main-content bg-lighter" style="padding-bottom:0px;">
+    <!-- Section: inner-header -->
+   <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+
+    <!-- Section: Blog -->
+    <section>
+      <div class="container mt-30 mb-0 pt-30 pb-30">
+        <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="sidebar sidebar-left mt-sm-30 ml-40">
+              <div class="widget">
+                <img src="{{capacitacion.img}}" alt="">
+                <div class="services-list">
+                  <ul class="list list-border angle-double-right">
+                    <li ng-repeat="capacitacion in capacitacionesFiltradas"><a href="page-courses-accounting-technologies.html">{{capacitacion.titulo}}</a></li>
+                    
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+          <div class="col-md-4 ">
+            <!-- <div class="single-service"> -->
+             
+              <h3 class="text-theme-colored">{{capacitacion.titulo}}</h3>
+              <h5><em>{{capacitacion.subtitulo}}</em></h5>
+              <p></p>
+              {{capacitacion.descripcion}}
+              <p >
+            <ul>
+              <li  ng-repeat="item in itemsContenido">
+                - {{item.contenido}}
+              </li>
+            </ul>
+
+              <!--  <h5><em>Duración:</em></h5>
+                {{capacitacion.duracion}} -->
+        <!--       </p>
+              <p> -->
+                 <h5><em>Observaciones:</em></h5>
+                {{capacitacion.observaciones}}
+                
+              </p>
+              </p>
+              <p>
+                
+              <div class="row">
+           
+
+
+             <!--   <i class="glyphicon-hand-right text-theme-colored font-50"></i>
+               Realizar Depósito o Transferencia al Número de cuenta del Banco de su preferencia a nombre de Centro Educativo Capacitate C.A. 
+              <br/>
+              <p>
+              <i class="glyphicon-hand-right text-theme-colored font-50"></i>
+              Llenar formulario de inscripción en línea -->
+              
+              </p><br/>
+             
+              </div>
+            
+           <!--  </div> -->
+          </div>
+
+          <div class="col-md-4 ">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="label bg-danger pull-right m-t-xs"></span>
+          
+        </div>
+        <table class="table table-striped m-b-none">
+          <!-- <thead>
+            <tr>
+              <th>Fecha inicio</th>
+              <th>Fecha culminacion</th 
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>
+                <b>Fecha Inicio:</b>
+              </td>
+              <td>{{capacitacion.fechaIni}}</td>
+            </tr>
+            <tr>                    
+              <td>
+              <b>
+                Fecha Culminación:</b>
+              </td>
+              <td>{{capacitacion.fechaFin}}</td>
+            </tr>
+            <tr>                    
+              <td>
+              <b>
+               Duración:</b>
+              </td>
+              <td>{{capacitacion.duracion}}</td>
+            </tr>
+            <tr>                    
+              <td>
+                <b>Área:</b>
+              </td>
+              <td>{{capacitacion.area}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+           <!-- <h3 class="text-white">{{capacitacion.subtitulo}}</h3> -->
+          
+
+           <div class="precio text-white"  style="background-image: url(images/priceLabel.png);height: 219px;;
+           width: 281px;">
+           <br/>
+           <!-- <br/> -->
+           <br/>
+           <span class="text-center"#/app/detalleCurso><h3><span class="text-white">Bs.F. {{capacitacion.inversion |number:0 }}</span></h3></span>
+           <br/>
+           <br/>
+           <br/>
+           
+           </div> 
+
+          </div>
+          <div class="col-md-8">
+          <h2>Pasos a seguir para la inscripción en el curso</h2>
+               <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                       <h3>1.</h3>
+                      <div class="ml-50 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5"></h4>
+                        <p> Realizar Depósito o Transferencia bancaria al Número de cuenta del Banco de su preferencia a nombre de <b> Centro Educativo Capacitate C.A.</b> </p>
+
+            <div class=""  style="background-image: url(images/bicentenario.jpg);height: 59px;width: 150px;">
+           </div> 
+           <div class=""  style="background-image: url(images/mercantil.jpg);height: 59px;width: 150px;">
+           </div> 
+                      </div>
+              </div>
+                <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                      <h3>2.</h3>
+                      <div class="ml-50 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5"></h4>
+                        <p>  Llenar <button class="btn btn-primary2 btn-xl text-hite font-bold " ng-click="openInscripcion(capacitacion)" style="box-shadow:7px 7px 7px rgba(0, 0, 0, 0.22);">Formulario de inscripción</button> </p>
+                      </div>
+              </div>
+
+          </div>
+          
+    </section>
+    <div class="row bg-light">
+    <div class="col-md-12">
+
+     <div class="col-md-12">
+          <div class="row">
+                <div class="col-md-12">
+                 
+ 
+                  <form id="volunteer_apply_form" class="bg-light p-30 pb-15" name="job_apply_form" >
+                <div class="row">
+                <h3>Suscríbete y obtén información sobre nuestras capacitaciones!</h3>
+                  <br/>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+
+                      <input id="form_name" name="form_nombres" type="text" ng-model="item.nombres" placeholder="Nombres" required="" class="form-control">
+                    </div>
+                  </div>
+                        <div class="col-sm-2">
+                    <div class="form-group">
+                 
+                      <input id="form_name" name="form_apellidos" type="text" ng-model="item.apellidos"placeholder="Apellidos" required="" class="form-control">
+                    </div>
+                  </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+     
+                      <input id="form_name" name="form_cedula" type="number" placeholder="C.I" required="" class="form-control" ng-model="item.identificacion">
+                    </div>
+                  </div>
+                   <div class="col-sm-2">
+                    <div class="form-group mb-4">
+                
+                      <div class="styled-select">
+                        <select id="booking_service" name="booking_service" ng-model="item.sexo"class="form-control" required="">
+                            <option value="">- Sexo -</option>
+                        <option value="F">F</option>
+                        <option value="M">M</option>
+          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-sm-3">
+                    <div class="form-group">
+
+                      <input id="form_email" name="form_email" class="form-control required email" ng-model="item.email"type="email" placeholder="Email">
+                    </div>
+                  </div>
+                 
+                  <div class="row"></div>
+                 
+                 
+                   <div class="col-sm-3">
+                    <div class="form-group">
+
+                      <input id="form_name" name="form_telefono" type="text"ng-model="item.telefono" placeholder="Teléfono" required="" class="form-control">
+                    </div>
+
+                  </div>
+                            <div class="col-sm-3">
+                    <div class="form-group">
+
+                      <input id="form_email" name="form_instagram" class="form-control required" ng-model="item.cuentaI" type="text" placeholder="Instagram">
+                    </div>
+                  </div>
+                   <div class="col-sm-3">
+                    <div class="form-group">
+          
+                      <input id="form_name" name="form_facebook" type="text" ng-model="item.cuentaF"placeholder="Facebook" required="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+
+                      <input id="form_name" name="form_twitter" type="text" ng-model="item.cuentaT"placeholder="Twitter" required="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row"></div>
+          
+                </div>
+                 <div class="row">
+          
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                
+                      <input id="form_name" name="form_universidad" type="text" ng-model="item.universidad"placeholder="Universidad" required="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                
+                      <input id="form_name" name="form_apellidos" type="text" placeholder="Carrera Universitaria" ng-model="item.carrera"required="" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group mb-6">
+                   
+                      <div class="styled-select">
+                        <select id="booking_service" name="booking_service" ng-model="item.actividad" class="form-control" required="" placeholer="Área de conocimiento de interés">
+                            <option value="">Seleccione un área de conocimiento de interés ...</option>
+                        <option value="Todas">Todas</option>
+                        <option value="Aduanera y Tributaria">Aduanera y Tributaria</option>
+                        <option value="Contable y Financiera">Contable y Financiera</option>
+                        <option value="Formación Gerencial y Empresarial">Formación Gerencial y Empresarial</option>
+                        <option value="Formación Pedagógica">Formación Pedagógica</option>
+                        <option value="Legislación">Legislación</option>
+                        <option value="Marketing y Ventas">Marketing y Ventas</option>
+                        <option value="Laboral, Seguridad y Salud Ocupacional">Laboral, Seguridad y Salud Ocupacional</option>
+                        <option value="Tecnología de la Información y Comunicación">Tecnología de la Información y Comunicación</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-sm-6">
+                    <div class="form-group">
+                 
+                      <input id="form_name" name="form_entero" type="text" ng-model="item.informador" placeholder="¿Cómo se enteró de Capacítate?" required="" class="form-control">
+                    </div>
+                  </div>
+                </div>
+               
+    
+                <div class="form-group">
+                  <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
+                  <p></p>
+                  <p></p>
+                  <br/>
+                  <button  class="btn btn-xl btn-primary2 text-center pull-right font-bold" data-loading-text="Please wait..." ng-click="suscripcionCapacitacion(item)">Suscribirse</button>
+                  <p></p>
+                  <p></p>
+                  <br/>
+                </div>
+              </form>
+                 
+
+                </div>
+              </div>
+
+
+
+     </div>
+    </div>
+    </div>
+  </div>
+        
+      </div>
+      
+</div>

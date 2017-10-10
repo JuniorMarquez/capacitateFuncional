@@ -1,0 +1,152 @@
+
+<link href="../css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="../css2/animate.css" rel="stylesheet" type="text/css">
+<link href="../css2/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="../css2/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="../css2/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="../css2/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="../css2/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="../css2/responsive.css" rel="stylesheet" type="text/css">
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = true;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="contactoCtrl">
+    <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+  <div class="container pt-0">
+  </br>
+  </br>
+        <div class="row mb-60 bg-deep panel panel-default2">
+          <div class="col-md-3 ">
+            <div class="contact-info text-center pt-60 pb-60 border-right">
+              <i class="fa fa-phone fa-5x font-36 mb-10 text-theme-colored" style="color:#271DED;"></i>
+              <h4>Teléfonos</h4>
+              <h6 class="text-gray">{{telefono1}}</h6>
+              <h6 class="text-gray">{{telefono2}}</h6>
+              <h6 class="text-gray">{{telefonoMovil}}</h6>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="contact-info text-center  pt-60 pb-60 border-right">
+              <i class="fa fa-map-marker fa-5x font-36 mb-10 text-theme-colored" style="color:#271DED;"></i>
+              <h4>Dirección</h4>
+              <h6 class="text-gray">{{direccion}}</h6>
+            </div>
+          </div>
+            <div class="col-md-3 ">
+            <div class="contact-info text-center  pt-60 pb-60 border-right">
+              <i class="fa fa-envelope fa-5x font-36 mb-10 text-theme-colored" style="color:#271DED;"></i>
+              <h4>Email</h4>
+              <h6 class="text-gray" ng-repeat="email in emails">{{email.email}}</h6>
+<!--               <h6 class="text-gray">formacion@capacitatevzla.com</h6>
+              <h6 class="text-gray">incompany@capacitatevzla.com</h6>
+              <h6 class="text-gray">presidencia@capacitatevzla.com</h6>
+              <h6 class="text-gray">gerente@capacitatevzla.com</h6>
+              <h6 class="text-gray">facilitadores@capacitatevzla.com</h6> -->
+              <!-- <h6 class="text-gray"></h6> -->
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="contact-info text-center  pt-60 pb-60">
+              <i class="fa fa-comments fa-5x font-36 mb-10 text-theme-colored" style="color:#271DED;"></i>
+              <h4>Redes Sociales</h4>
+               <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
+              <li><a href="http://facebook.com/{{facebook}}" target="_blank" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://twitter.com/{{twitter}}" target="_blank" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+              <!-- <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li> -->
+              <li><a href="http://instagram.com/{{instagram}}" target="_blank" data-bg-color="#844200"><i class="fa fa-instagram"></i></a></li>
+              <!-- <li><a href="#" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li> -->
+              <!-- <li><a href="#" data-bg-color="#A4CA39"><i class="fa fa-android"></i></a></li> -->
+              <!-- <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li> -->
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-10">
+          <div class="col-md-5 panel panel-default2">
+          <h4 class="mt-0 mb-30 line-bottom">Ubícanos en el mapa</h4>
+          <!-- Google Map HTML Codes -->
+       <!--    <div 
+            data-address="Centro Educativo Capacítate C.A."
+            data-popupstring-id="#popupstring1"
+            class="map-canvas autoload-map"
+            data-mapstyle="default"
+            data-height="420"
+            data-latlng="7.819124, -72.224842"
+            data-title="sample title"
+            data-zoom="17"
+            data-marker="images/map-marker.png">
+          </div>
+          <div class="map-popupstring hidden" id="popupstring1">
+            <div class="text-center">
+              <h3>CharityFund Office</h3>
+              <p>121 King Street, Melbourne Victoria 3000 Australia</p>
+            </div>
+          </div> -->
+          <!-- Google Map Javascript Codes -->
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.7228711952102!2d-72.22703268593544!3d7.819130308916047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e666c0e1c1a3351%3A0xedabe0a7ce82aa0b!2sCapacitate+C.A.!5e0!3m2!1ses!2ses!4v1500300936033" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-5 pull-right"> 
+            <h4 class="mt-0 mb-30 line-bottom">Escríbenos un mensaje</h4>
+            <!-- Contact Form -->
+<!--             <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post"> -->
+<form id="contact_form" name="contact_form" >
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <!-- <label for="form_name">Nombres <small>*</small></label> -->
+                    <input name="form_name" class="form-control" type="text" placeholder="Nombre" required="" ng-model="item.nombre">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <!-- <label>Email <small>*</small></label> -->
+                    <input name="form_email" class="form-control required email" type="email" placeholder="Email" ng-model="item.email">
+                  </div>
+                </div>
+              </div>                
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <!-- <label for="form_name">Asunto <small>*</small></label> -->
+                    <input name="form_subject" class="form-control required" type="text" placeholder="Asunto" 
+                    ng-model="item.asunto">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <!-- <label for="form_phone">Teléfono</label> -->
+                    <input name="form_phone" class="form-control" type="text" placeholder="Teléfono" ng-model="item.telefono">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="form_name">Mensaje</label> -->
+                <textarea name="form_message" class="form-control required" rows="5" placeholder="Mensaje" 
+                ng-model="item.mensaje"></textarea>
+              </div>
+              <div class="form-group pull-right">
+                <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                <button class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Espere por favor..." ng-click="mensajeContacto(item)">Enviar</button>
+                <button type="reset" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Borrar</button>
+              </div>
+            </form>
+
+            <!-- Contact Form Validation-->
+    
+          </div>
+        </div>
+      </div>
+        
+      </div>
+  
+</div>

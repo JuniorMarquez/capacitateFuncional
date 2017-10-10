@@ -1,0 +1,176 @@
+<div class="modal-header" ng-init="consultaCapacitacionInscripcion()">
+    <h3 class="modal-title">Postulacion<p>
+   </p></h3>
+<!--      <h5 ><p>
+    {{item.titulo}} {{item.inversion}} </p></h5> -->
+
+</div>
+<div class="modal-body">
+
+    	  <tabset class="tab-container" ng-init="steps={percent:20, step1:true, step2:false, step3:false}">
+    <tab heading="Datos Personales" active="steps.step1" select="steps.percent=10">
+      <!-- <p class="m-b">Use the Bootstrap tab components and ngForm to build the form wizard.</p> -->
+      <progressbar value="steps.percent" class="progress-xs" type="success"></progressbar>
+    <!--   <h4>Validate Form</h4> -->
+      <form name="step1" class="form-validation">
+        <p>Nombres:</p>
+        <input type="text" name="nombres" class="form-control" ng-model="item.nombres" required ng-change="step1.text.$valid ? (steps.percent=0) : (steps.percent=10)">
+         <p>Apellidos:</p>
+        <input type="text" name="apellidos" class="form-control" ng-model="item.apellidos" required ng-change="step1.text.$valid ? (steps.percent=10) : (steps.percent=20)">
+       
+
+ <div class="row">
+ <br/>
+              <div class="form-group col-md-12" >
+                  <div  >
+                   <!--  <i class=" icon-pointer"></i> Nacionalidad -->
+                    <ui-select ng-model="item.nacionalidad" theme="bootstrap" required>
+                      <ui-select-match placeholder="Nacionalidad...">{{$select.selected.nombre}}</ui-select-match>
+                      <ui-select-choices group-by="'nombre'" repeat="item.nombre as item in nacionalidades | filter: $select.search">
+                        <span ng-bind-html="item.nombre | highlight: $select.search"></span>
+                      </ui-select-choices>
+                    </ui-select>
+                  </div>
+              </div> 
+            </div> 
+ <p>Cédula de Identidad / Nro. Pasaporte:</p>
+        <input type="number" name="identificacion" class="form-control" ng-model="item.identificacion" required ng-change="step1.text.$valid ? (steps.percent=20) : (steps.percent=30)">
+
+
+       <!--  <input type="select" name="url" placeholder="http://" class="form-control" ng-model="website" required> -->
+        <div class="m-t m-b">
+            <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+          <button type="submit" ng-disabled="step1.$invalid" class="btn btn-default btn-rounded" ng-click="steps.step2=true">Siguiente</button>
+        </div>
+      </form>
+    </tab>
+    <tab heading="Datos Profesionales" disabled="step1.$invalid" active="steps.step2" select="steps.percent=30">
+      <form name="step2" class="form-validation">
+        <!-- <p class="m-b">Continue the next step</p> -->
+        <progressbar value="steps.percent" class="progress-xs" type="success"></progressbar>
+        <div class="row">
+ <br/>
+              <div class="form-group col-md-12" >
+                  <div  >
+                   <!--  <i class=" icon-pointer"></i> Nacionalidad -->
+                    <ui-select ng-model="item.nivelInstruccion" theme="bootstrap" required>
+                      <ui-select-match placeholder="Nivel de Instrucción...">{{$select.selected.nombre}}</ui-select-match>
+                      <ui-select-choices group-by="'nombre'" repeat="item.nombre as item in niveles | filter: $select.search">
+                        <span ng-bind-html="item.nombre | highlight: $select.search"></span>
+                      </ui-select-choices>
+                    </ui-select>
+                  </div>
+              </div> 
+            </div> 
+             <p>Profesión:</p>
+        <input type="text" name="profesion" class="form-control" ng-model="item.profesion" required ng-change="step1.text.$valid ? (steps.percent=30) : (steps.percent=40)">
+
+        
+<p>C.V:</p>
+  
+
+
+  <input type="file" nv-file-select="" uploader="uploader" />
+                      <table class="table bg-white-only b-a">
+                          <thead>
+                              <tr>
+                                  <th width="50%">Nombre</th>
+                                  <th ng-show="uploader.isHTML5">Tamaño</th>
+                                  <th ng-show="uploader.isHTML5">Progreso</th>
+                                  <th>Estado</th>
+                                  <th>Acciones</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in uploader.queue">
+                                  <td><strong>{{ item.file.name }}</strong></td>
+                                  <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                  <td ng-show="uploader.isHTML5">
+                                      <div class="progress progress-sm m-b-none m-t-xs">
+                                          <div class="progress-bar bg-info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                      </div>
+                                  </td>
+                                  <td class="text-center">
+                                      <span ng-show="item.isSuccess" class="text-success"><i class="glyphicon glyphicon-ok"></i></span>
+                                      <span ng-show="item.isCancel" class="text-warning"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                      <span ng-show="item.isError" class="text-danger"><i class="glyphicon glyphicon-remove"></i></span>
+                                  </td>
+                                  <td nowrap>
+                                      <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                          Subir
+                                      </button>
+                                      <button type="button" class="btn btn-default btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                          Cancelar
+                                      </button>
+                                      <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                          Remover
+                                      </button>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <div class="progress bg-light dker" style="">
+                              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                      </div>
+
+        <div class="m-t m-b">
+            <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+          <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step1=true">Anterior</button>
+          <button type="submit" ng-disabled="step2.$invalid" class="btn btn-default btn-rounded" ng-click="steps.step3=true">Siguiente</button>
+        </div>
+      </form>
+    </tab>
+    <tab heading="Datos de Contacto" disabled="step2.$invalid" active="steps.step3" select="steps.percent=60">
+        <form name="step3" class="form-validation">
+      <!-- <p class="m-b">Congraduations! You got the last step.</p> -->
+      <progressbar value="steps.percent" class="progress-xs" type="success"></progressbar>
+      <div class="row"> 
+      <div class="col-sm-6">
+        <p>Email:</p>
+        <input type="email" name="email" class="form-control" ng-model="item.email" required ng-change="step3.email.$valid ? (steps.percent=60) : (steps.percent=70)">
+      </div>
+      <div class="col-sm-6">
+        <p>Teléfono:</p>
+        <input type="number" name="telefono" class="form-control" ng-model="item.telefono" required >
+      </div>
+      <div class="col-sm-12">
+        <p>Dirección:</p>
+        <input type="text" name="direccion" class="form-control" ng-model="item.direccion" required ng-change="step3.text.$valid ? (steps.percent=70) : (steps.percent=80)">
+      </div>
+      <div class="col-sm-6">
+        <p>Instagram:</p>
+        <input type="text" name="instagram" class="form-control" ng-model="item.instagram"  >
+      </div>
+        <div class="col-sm-6">
+        <p>Facebook:</p>
+        <input type="text" name="facebook" class="form-control" ng-model="item.facebook"  >
+      </div>
+        <div class="col-sm-6">
+        <p>Twitter:</p>
+        <input type="text" name="twitter" class="form-control" ng-model="item.twitter"  >
+      </div>
+      </div>
+
+       <div class="m-t m-b">
+          <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+        <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step2=true">Anterior</button>
+        <button type="button" class="btn btn-default btn-rounded" ng-click="guardarInscripcion(item)">Finalizar</button>
+      </div>
+</form>
+
+
+    </tab>
+
+
+<!-- ########### -->
+ 
+
+
+
+
+  </tabset>
+ </div>
+<!-- <div class="modal-footer">                  
+
+    <button class="btn btn-primary" ng-click="okComite(item)">OK</button>
+</div> -->
