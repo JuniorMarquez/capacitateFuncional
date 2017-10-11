@@ -11,6 +11,7 @@ $scope.vectorPublicaciones=[];
   $http.get('http://52.39.15.75:1346/publicacion').then(function (resp) {
     $scope.publicaciones = resp.data.results;
     for (var i = 0; i < $scope.publicaciones.length; ++i){
+        
           // $scope.publicaciones[i].link="../capacitateMod/detalleCurso.html?id="+$scope.publicaciones[i].id;  
            $scope.publicaciones[i].img="/administracion/js/controllers/uploads/works/"+$scope.publicaciones[i].img;          $scope.publicaciones[i].img2="administracion/js/controllers/uploads/works/"+$scope.publicaciones[i].img;
            $scope.vectorPublicaciones.push($scope.publicaciones[i]);
