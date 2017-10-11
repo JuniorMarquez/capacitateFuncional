@@ -11,7 +11,7 @@ app.controller('cursosCtrl', ['$scope', '$http', '$filter', '$modal', 'MyService
     // text: 'Miembro habilitado con exito',
   };
   $scope.vectorAreas=[];
- $http.get('http://54.202.62.62:1346/areaConocimiento').then(function (resp) {
+ $http.get('http://52.39.15.75:1346/areaConocimiento').then(function (resp) {
 $scope.areasConocimiento = resp.data.results;
 for (var i = 0; i < $scope.areasConocimiento.length; ++i){
           // $scope.areasConocimiento[i].link="../capacitateMod/detalleCurso.html?id="+$scope.areasConocimiento[i].id;  

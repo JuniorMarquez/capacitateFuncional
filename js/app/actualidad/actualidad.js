@@ -8,7 +8,7 @@ app.controller('actualidadCtrl', ['$scope', '$http', '$filter', '$modal', 'MySer
   };
 
 $scope.vectorNoticias=[];
-  $http.get('http://54.202.62.62:1346/noticia').then(function (resp) {
+  $http.get('http://52.39.15.75:1346/noticia').then(function (resp) {
     $scope.noticias = resp.data.results;
     for (var i = 0; i < $scope.noticias.length; ++i){
           // $scope.noticias[i].link="../capacitateMod/detalleCurso.html?id="+$scope.noticias[i].id;  

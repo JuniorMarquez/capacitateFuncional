@@ -19,16 +19,16 @@ app.controller('contactoCtrl', ['$scope', '$http', '$filter', '$modal', 'MyServi
     };
 
     $scope.mensajeContacto=function(item){
-      $http.post('http://54.202.62.62:1346/mensaje',item)
+      $http.post('http://52.39.15.75:1346/mensaje',item)
       // alert("lala");
       $scope.popMensaje();
     };
 
-      $http.get('http://54.202.62.62:1346/emailcorporativo/').then(function (resp) {
+      $http.get('http://52.39.15.75:1346/emailcorporativo/').then(function (resp) {
         $scope.emails = resp.data.results;
       });
 
-$http.get('http://54.202.62.62:1346/contacto').success(function(respuesta){
+$http.get('http://52.39.15.75:1346/contacto').success(function(respuesta){
   $scope.contacto = respuesta.results[0];
         $scope.direccion=$scope.contacto.direccion;
         $scope.telefono1=$scope.contacto.telefono1;

@@ -8,7 +8,7 @@ app.controller('publicacionesCtrl', ['$scope', '$http', '$filter', '$modal', 'My
   };
 
 $scope.vectorPublicaciones=[];
-  $http.get('http://54.202.62.62:1346/publicacion').then(function (resp) {
+  $http.get('http://52.39.15.75:1346/publicacion').then(function (resp) {
     $scope.publicaciones = resp.data.results;
     for (var i = 0; i < $scope.publicaciones.length; ++i){
           // $scope.publicaciones[i].link="../capacitateMod/detalleCurso.html?id="+$scope.publicaciones[i].id;  

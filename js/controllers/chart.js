@@ -25,7 +25,7 @@ $scope.suscripcionFooter=function(item){
   // alert("nombre: "+item.nombre);
   item.tipoSuscripcion="footer";
   item.status="pendiente";
-  $http.post('http://54.202.62.62:1346/suscripcion',item)
+  $http.post('http://52.39.15.75:1346/suscripcion',item)
   $scope.popSuscripcion();
 };
 
@@ -68,7 +68,7 @@ $scope.vectorCapacitaciones=[];
 $scope.vectorCursos1=[];
   var tempArr = [];
  var i=0;
- $http.get('http://54.202.62.62:1346/contacto').success(function(respuesta){
+ $http.get('http://52.39.15.75:1346/contacto').success(function(respuesta){
   $scope.contacto = respuesta.results[0];
         $scope.direccion=$scope.contacto.direccion;
         $scope.telefono1=$scope.contacto.telefono1;
@@ -80,7 +80,7 @@ $scope.vectorCursos1=[];
         $scope.contactoLineal=$scope.contacto.contactoLineal;
         $scope.emailContacto=$scope.contacto.emailContacto;
         });
- $http.get('http://54.202.62.62:1346/capacitacion').then(function (resp) {
+ $http.get('http://52.39.15.75:1346/capacitacion').then(function (resp) {
 $scope.vectorCapacitaciones = resp.data.results;
 $scope.vectorCapacitaciones=$scope.vectorCapacitaciones.reverse();
 for (var i = 0; i < 4; ++i){
@@ -166,7 +166,7 @@ $scope.cargador=function()
       var datosCuenta="";
       var item={};
 //     $scope.item={};
-    // $http.get('http://54.202.62.62:1345/configuracion').success(function(respuesta){
+    // $http.get('http://52.39.15.75:1345/configuracion').success(function(respuesta){
     //     $scope.configuracion = respuesta.results[0];
     //     $scope.item.mision=respuesta.results[0].mision; 
     // });

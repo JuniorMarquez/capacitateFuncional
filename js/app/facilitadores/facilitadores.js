@@ -14,7 +14,7 @@ app.controller('FacilitadoresCtrl', ['$scope', '$http', '$filter', '$modal', 'My
   $scope.cargaFacilitadores=function(){
       $scope.items=[];
       $scope.fac='';
-         $http.get('http://54.202.62.62:1346/facilitador').then(function (resp) {
+         $http.get('http://52.39.15.75:1346/facilitador').then(function (resp) {
         $scope.facilitadores = resp.data.results;
         for (var i = 0; i < $scope.facilitadores.length; ++i){
                   // $scope.facilitadores[i].link="../capacitateMod/detalleCurso.html?id="+$scope.facilitadores[i].id;  
@@ -88,7 +88,7 @@ app.controller('FacilitadoresCtrl', ['$scope', '$http', '$filter', '$modal', 'My
   $scope.cargaFacilitadores();
   // $scope.selectorObligaciones=function(){
   //     $scope.items=[];
-  //        $http.get('http://54.202.62.62:1346/obligacion').then(function (resp) {
+  //        $http.get('http://52.39.15.75:1346/obligacion').then(function (resp) {
   //       $scope.obligacionesLaborales = resp.data.results;
   //       for (var i = 0; i < $scope.obligacionesLaborales.length; ++i){
   //                 // $scope.obligacionesLaborales[i].link="../capacitateMod/detalleCurso.html?id="+$scope.obligacionesLaborales[i].id;  

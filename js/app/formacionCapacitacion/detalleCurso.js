@@ -47,14 +47,14 @@ var dato="";
   $scope.suscripcionCapacitacion=function(item){
     item.tipoSuscripcion="capacitacion";
     item.status="pendiente";
-    $http.post('http://54.202.62.62:1346/suscripcion',item)
+    $http.post('http://52.39.15.75:1346/suscripcion',item)
     // alert("lala");
     $scope.popMensajeMC();
   };
    $scope.cargaCursos=function(){
       // $scope.capacitacionesFiltradas=[];
     var area = MyService.data.areaSeleccionada;
-    http.get('http://54.202.62.62:1346/capacitacion/?area='+area).then(function (resp) {
+    http.get('http://52.39.15.75:1346/capacitacion/?area='+area).then(function (resp) {
       $scope.capacitaciones = resp.data.results;
       });
       for (var i = 0; i < $scope.capacitaciones.length; ++i){
@@ -68,7 +68,7 @@ $scope.carga=function(){
   var item=[];
   var identificador = MyService.data.idCapacitacion;
   // alert("identificador: "+identificador);
-  $http.get('http://54.202.62.62:1346/capacitacion/'+identificador).success(function(respuesta){        
+  $http.get('http://52.39.15.75:1346/capacitacion/'+identificador).success(function(respuesta){        
     item=respuesta;
     item.img="administracion/js/controllers/uploads/"+item.img;
     $scope.capacitacion=item;

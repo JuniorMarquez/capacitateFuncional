@@ -13,7 +13,7 @@ app.controller('IncompanyCtrl', ['$scope', '$http', '$filter', '$modal', 'MyServ
   // alert("cargado");
   $scope.selectorAreas=function(){
       $scope.items=[];
-         $http.get('http://54.202.62.62:1346/areaConocimiento').then(function (resp) {
+         $http.get('http://52.39.15.75:1346/areaConocimiento').then(function (resp) {
         $scope.areasConocimiento = resp.data.results;
         for (var i = 0; i < $scope.areasConocimiento.length; ++i){
                   // $scope.areasConocimiento[i].link="../capacitateMod/detalleCurso.html?id="+$scope.areasConocimiento[i].id;  
@@ -24,7 +24,7 @@ app.controller('IncompanyCtrl', ['$scope', '$http', '$filter', '$modal', 'MyServ
   };
   $scope.selectorObligaciones=function(){
       $scope.items=[];
-         $http.get('http://54.202.62.62:1346/obligacion').then(function (resp) {
+         $http.get('http://52.39.15.75:1346/obligacion').then(function (resp) {
         $scope.obligacionesLaborales = resp.data.results;
         for (var i = 0; i < $scope.obligacionesLaborales.length; ++i){
                   // $scope.obligacionesLaborales[i].link="../capacitateMod/detalleCurso.html?id="+$scope.obligacionesLaborales[i].id;  

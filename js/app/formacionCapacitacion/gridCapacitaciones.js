@@ -16,7 +16,7 @@ $scope.selector=selector;
 $scope.seleccionado=seleccionado;
 $scope.capacitaciones=[];
 $scope.capacitacionesFiltradas=[];
-$http.get('http://54.202.62.62:1346/capacitacion').then(function (resp) {
+$http.get('http://52.39.15.75:1346/capacitacion').then(function (resp) {
 $scope.capacitaciones = resp.data.results;
   for (var i = 0; i < $scope.capacitaciones.length; ++i){
     if(selector=="area"){ 
